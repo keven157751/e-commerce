@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Input from "./components/input";
+import SideBar from "./components/sideBar";
+import CartButton from "./components/cartButton";
 
 export const metadata: Metadata = {
   title: {
@@ -16,9 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head className="bg-gray-700  flex justify-center items-center h-10 p-8">
+        <Input/>
+      </head>
       <body>
+      <CartButton/>
+      <SideBar/>
         {children}
-        <footer>rodapé</footer>
       </body>
     </html>
   );
